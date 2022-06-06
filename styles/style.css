@@ -213,6 +213,7 @@
   
   h4 + p {
     padding: 0.5rem 0;
+    color: #FFF;
   }
   
   hr + p {
@@ -224,7 +225,7 @@
     display: flex;
   }
   
-  @media (max-width: 58.5625rem) {
+  @media (max-width: 60rem) {
     .company-name {
       padding: 0 2rem;
     }
@@ -353,9 +354,9 @@
       text-align: center;
       gap: 0;
     }
-    
-    section:first-child {
-      gap: 2rem;
+
+    .hero-img {
+      margin-top: 2rem;
     }
     
     section:nth-child(2),
