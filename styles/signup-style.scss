@@ -1,0 +1,284 @@
+:root {
+    --light-orange: ;
+    --dark-orange: rgb(224, 110, 22);
+    --light-gray: #D3D3D3;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+
+    font-family: sans-serif;
+    height: 100vh;
+    background: var(--dark-orange);
+  }
+
+  nav {
+    padding: 0.5rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color:#FFF9EF;
+    // position: absolute;
+    top: 0;
+    width: 100%;
+    
+  }
+
+  .company-name {
+    font-family: 'Concert One', cursive;
+    font-size: 2rem;
+    margin: 0 3em;
+    color: #FF743F;
+    text-decoration: none;
+  }
+  
+   main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     position: relative;
+     height: 80%;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    position: relative;
+    bottom: 55%;
+    left: 20%;
+    letter-spacing: 0.33em;
+    color: rgba(224, 110, 22, 0.75);
+  }
+  
+  .greeting {
+    color: #ffc79c;
+    padding: 1.5rem 0;
+  }
+
+  #single-word {
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  #single-word:before {
+    margin-right: 1rem;
+  }
+  
+  #single-word:after {
+    margin-left: 1rem;
+  }
+  
+  #single-word:before,
+  #single-word:after {
+    content:"";
+    width: 9.5rem;
+    height: 2px;
+    background-color: black;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  
+  /* Rolling menu */
+  
+  .cc-rockmenu a {
+    text-decoration: none;
+    color: #2E3442;
+    margin-right: 0.5rem;
+  }
+  
+  .cc-rockmenu .rolling {
+    display: inline-block;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    text-align:left;
+    overflow: hidden;
+    border-radius: 26px;
+    background: #ffb47a;
+    transition: all 0.3s ease-out;
+    white-space: nowrap;
+  }
+  
+  .cc-rockmenu .rolling:hover {
+    width: 15rem;
+  }
+  
+  .cc-rockmenu .rolling .rolling_icon {
+    float:left;
+    z-index: 9;
+    display: flex;
+    width: 52px;
+    background-color: var(--dark-orange);
+    border: 2px solid #ffb47a;
+    height: 52px;
+    border-radius: 26px;
+    box-sizing: border-box;
+    margin: 0 10px 0 0;
+  }
+  
+  .cc-rockmenu .rolling .rolling_icon:hover .rolling {
+    width: 312px;
+  }
+  
+  .cc-rockmenu .rolling .rolling_icon:hover {
+    background: #ffb47a;
+  }
+  
+  .cc-rockmenu .rolling:hover {
+    .rolling_icon {
+      background: #ffb47a;
+    }
+  }
+  
+  .cc-rockmenu .rolling svg {
+      padding: 15px;
+  }
+  
+  .cc-rockmenu .rolling p {
+      margin: auto;
+    display: block;
+    font-size: 16px;
+    line-height: 52px;
+  }
+  
+  .facebook {
+    width: 100px;
+  }
+  
+  form {
+    margin-top: 1rem;
+  }
+  
+  .form-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.55rem;
+  }
+  
+  label {
+    padding-left: 1rem;
+  }
+  
+  input {
+    border-radius: 3rem;
+    border: 2px solid #ffb47a;
+    padding: 0.75rem;
+    outline: none;
+    background: transparent;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  input::placeholder {
+    color: var(--light-gray);
+  }
+  
+  
+  .form-input:nth-child(3) {
+    grid-column: span 2;
+  }
+  
+  .form-input:nth-child(3) input {
+    /* max-width: 460px; */
+    max-width: 410.8px;
+    min-width: 410.8px;
+    width: 100%;
+  }
+  
+  /* The container */
+  .container-checkbox {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .container-checkbox .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: transparent;
+      border: 2px solid orange;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-checkbox:hover input ~ .checkmark {
+      background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-checkbox input:checked ~ .checkmark {
+      background-color: #a66f44;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .container-checkbox .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-checkbox input:checked ~ .checkmark:after {
+      display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-checkbox .checkmark:after {
+      left: 7px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }
+
+  #sign-up-btn {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  #sign-up-btn:hover {
+    background-color: #ffb47a;
+  }
+  
+  @media (max-width: 53.75rem) {
+    
+    main {
+      /* display: grid; */
+      height: 100vh;
+    }
+    
+    .col:first-child {
+      display: none;
+    }
+    
+    .col:last-child {
+      /* padding: 2rem; */
+      border: 2px solid black;
+    }
+  }
+  
