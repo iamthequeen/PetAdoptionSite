@@ -1,5 +1,4 @@
 :root {
-    --light-orange: ;
     --dark-orange: rgb(224, 110, 22);
     --light-gray: #D3D3D3;
   }
@@ -9,9 +8,8 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  body {
 
+  body {
     font-family: sans-serif;
     height: 100vh;
     background: var(--dark-orange);
@@ -23,10 +21,7 @@
     display: flex;
     justify-content: center;
     background-color:#FFF9EF;
-    // position: absolute;
-    top: 0;
     width: 100%;
-    
   }
 
   .company-name {
@@ -35,6 +30,7 @@
     margin: 0 3em;
     color: #FF743F;
     text-decoration: none;
+    font-weight: 500;
   }
   
    main {
@@ -42,7 +38,7 @@
     align-items: center;
     justify-content: center;
      position: relative;
-     height: 80%;
+     margin-top: 2rem;
   }
 
   h1 {
@@ -266,12 +262,7 @@
   }
   
   @media (max-width: 53.75rem) {
-    
-    main {
-      /* display: grid; */
-      height: 100vh;
-    }
-    
+  
     .col:first-child {
       display: none;
     }
@@ -279,6 +270,52 @@
     .col:last-child {
       /* padding: 2rem; */
       border: 2px solid black;
+    }
+  }
+
+  @media (max-width: 31.25rem) {
+    nav {
+      display: block;
+      background-color: transparent;
+    }
+
+    main {
+      width: 100vw;
+    }
+
+    .company-name {
+      background-color: #FFF9EF;
+      padding: 1.5rem;
+    }
+
+    main div {
+      text-align: center;
+    }
+
+    #single-word:before,
+  #single-word:after {
+    width: 20%;
+  }
+
+    .form-inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    label {
+      padding: 0;
+    }
+
+    #email {
+      max-width: 197px;
+      min-width: 197px;
+      width: 197px;
+    }
+
+    .container-checkbox {
+      width: 75%;
+      display: inline-block;
     }
   }
   
