@@ -4,7 +4,8 @@
   "description": "Website to adopt pets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,8 @@
     "url": "https://github.com/iamthequeen/PetAdoptionSite/issues"
   },
   "homepage": "https://github.com/iamthequeen/PetAdoptionSite#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.16"
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
   }
 }
